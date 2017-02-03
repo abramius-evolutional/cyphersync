@@ -1,0 +1,3 @@
+* * * * * root curl 'web:8000/internal_api/minutely_task/?secret=d29d30e48d4a9e4f3df3dkeoocls4yid' >> /var/log/cron.log 2>&1
+0 * * * * root curl 'web:8000/internal_api/hourly_task/?secret=d29d30e48d4a9e4f3df3dkeoocls4yid' >> /var/log/cron.log 2>&1
+0 6 * * * root curl 'web:8000/internal_api/daily_task/?secret=d29d30e48d4a9e4f3df3dkeoocls4yid' >> /var/log/cron.log 2>&1

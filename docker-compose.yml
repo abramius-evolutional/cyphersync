@@ -1,0 +1,15 @@
+db:
+  image: postgres
+web:
+  build: ./web/
+  command: python /code/manage.py runserver 0.0.0.0:8000
+  volumes:
+    - ./web/code/:/code
+  ports:
+    - "8000:8000"
+  links:
+    - db
+cron:
+  build: ./cron/
+  links:
+    - web
